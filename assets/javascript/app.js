@@ -54,20 +54,18 @@ $(document).ready(function(){
 
 // create a way to add point for selecting correct answer
     $(function(){
-        $('input[value="Yoda"], [value="Anakin"], [value="Red"]').click(function(){
+        $('input[value="correctAns"]').click(function(){
             if($(this).is(':checked'))
             {
-                console.log($(this).val());
                 Correct++;
                 $("#correct").text(Correct)
             }
         })
 // this function is for adding points to incorrect score
     $(function(){
-        $('input[value="ObiWan"], [value="Jabba"], [value="Boba"], [value="Emperor"], [value="Green"], [value="Black"]').click(function(){
+        $('input[value="wrongAns"]').click(function(){
             if($(this).is(':checked'))
             {
-                console.log($(this).val());
                 Incorrect++;
                 $("#incorrect").text(Incorrect)
             }
